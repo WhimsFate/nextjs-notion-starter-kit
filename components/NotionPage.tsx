@@ -34,7 +34,6 @@ import { Footer } from './Footer'
 import { PageSocial } from './PageSocial'
 import { GitHubShareButton } from './GitHubShareButton'
 import { ReactUtterances } from './ReactUtterances'
-import { HeroHeader } from './HeroHeader'
 
 import styles from './styles.module.css'
 
@@ -168,9 +167,9 @@ export const NotionPage: React.FC<types.PageProps> = ({
     pageAside = <PageSocial />
   }
 
-  if (isRootPage || isBioPage) {
-    pageCover = <HeroHeader className='notion-page-cover' />
-  }
+  // if (isRootPage || isBioPage) {
+  //   pageCover = <HeroHeader className='notion-page-cover' />
+  // }
 
   return (
     <TwitterContextProvider
@@ -287,7 +286,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
             toggleDarkMode={darkMode.toggle}
           />
         }
-        pageCover={pageCover}
+        // pageCover={pageCover}
       />
 
       <GitHubShareButton />
